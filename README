@@ -1,0 +1,4 @@
+Testing Kai Ruhl's JOGL demos http://www.land-of-kain.de/docs/jogl/
+The earth image is downloaded from http://planetpixelemporium.com/earth.html without permission.
+Modified the code to work with the current version of JOGL (downloaded on the 25th of Jan 2014), and made the earth rotate instead of adding satellites.
+The Quaternion.java is not used, copied that from http://introcs.cs.princeton.edu/java/32class/Quaternion.java.html
