@@ -3,4 +3,6 @@ The earth image is downloaded from http://planetpixelemporium.com/earth.html wit
 Modified the code to work with the current version of JOGL (downloaded on the 25th of Jan 2014), and made the earth rotate instead of adding satellites.
 The Quaternion.java is not used, copied that from http://introcs.cs.princeton.edu/java/32class/Quaternion.java.html
 
+timo/test/KainTutorial.java is the one class that works, others were for testing (and some didn't ever compile). It was easier to include the whole folder..
+
 Obviously depends on jogl (http://jogamp.org/jogl/www/), which in turn depends on gluegen.
