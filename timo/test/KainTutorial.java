@@ -114,7 +114,7 @@ public class KainTutorial extends GLCanvas implements GLEventListener {
         try {
             //InputStream stream = getClass().getResourceAsStream("world.topo.bathy.200401.3x5400x2700.jpg");
             //InputStream stream = new FileInputStream(new String("/home/rande/programming/java/jogl/timoTest/world.topo.bathy.200401.3x5400x2700.jpg"));
-            InputStream stream = new FileInputStream(new String("/home/rande/programming/java/jogl/timoTest/earthmap1k.jpg"));
+            InputStream stream = new FileInputStream(new String("earthmap1k.jpg"));
             //InputStream stream = new FileInputStream(new String("/home/rande/programming/java/jogl/timoTest/earth.jpg"));
             //TextureData data = TextureIO.newTextureData(stream, false, "jpg");
             earthTexture = TextureIO.newTexture(stream, false, "jpg");
@@ -199,8 +199,8 @@ public class KainTutorial extends GLCanvas implements GLEventListener {
         glu.gluQuadricNormals(earth, GLU.GLU_FLAT);
         glu.gluQuadricOrientation(earth, GLU.GLU_OUTSIDE);
         final float radius = 6.378f;
-        final int slices = 25;
-        final int stacks = 25;
+        final int slices = 180;
+        final int stacks = 180;
         glu.gluSphere(earth, radius, slices, stacks);
         glu.gluDeleteQuadric(earth);
 
