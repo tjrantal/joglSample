@@ -112,10 +112,8 @@ public class KainTutorial extends GLCanvas implements GLEventListener {
             	/*Try to load the texture last*/
         // Load earth texture.
         try {
-            //InputStream stream = getClass().getResourceAsStream("world.topo.bathy.200401.3x5400x2700.jpg");
-            //InputStream stream = new FileInputStream(new String("/home/rande/programming/java/jogl/timoTest/world.topo.bathy.200401.3x5400x2700.jpg"));
-            InputStream stream = new FileInputStream(new String("earthmap1k.jpg"));
-            //InputStream stream = new FileInputStream(new String("/home/rande/programming/java/jogl/timoTest/earth.jpg"));
+            //InputStream stream = new FileInputStream(new String("earthmap1k.jpg"));
+			InputStream stream = getClass().getResourceAsStream(new String("/earthmap1k.jpg"));
             //TextureData data = TextureIO.newTextureData(stream, false, "jpg");
             earthTexture = TextureIO.newTexture(stream, false, "jpg");
         }
