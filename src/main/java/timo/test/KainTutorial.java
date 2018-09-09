@@ -2,15 +2,14 @@ package timo.test;
 
 import java.awt.BorderLayout;
 
-import javax.media.opengl.*;
-import javax.media.opengl.awt.GLCanvas;		/*GLCanvas*/
+import com.jogamp.opengl.*;
+import com.jogamp.opengl.awt.GLCanvas;		/*GLCanvas*/
 import com.jogamp.opengl.util.*;			/*FPSAnimator*/
-import javax.media.opengl.glu.*;			/*GL utilities, drawing tools?*/
+import com.jogamp.opengl.glu.*;			/*GL utilities, drawing tools?*/
 import javax.swing.JFrame;
 import java.io.*;					/*For texture*/
 import com.jogamp.opengl.util.texture.*;		/*For texture*/
 import java.io.IOException;					/*Error handling*/
-import timo.test.utils.*;					/*Quaternions for rotations*/
 
 /**
  * Modified from the: 
@@ -43,9 +42,8 @@ public class KainTutorial extends GLCanvas implements GLEventListener {
     
     /*Texture*/
     private Texture earthTexture;
-	private float rotationAngle;
-	private Quaternion earthAxis;
-	private Quaternion rotationAxis;
+	 private float rotationAngle;
+
     /**
      * A new mini starter.
      * 
@@ -197,8 +195,8 @@ public class KainTutorial extends GLCanvas implements GLEventListener {
         glu.gluQuadricNormals(earth, GLU.GLU_FLAT);
         glu.gluQuadricOrientation(earth, GLU.GLU_OUTSIDE);
         final float radius = 6.378f;
-        final int slices = 180;
-        final int stacks = 180;
+        final int slices = 36;
+        final int stacks = 36;
         glu.gluSphere(earth, radius, slices, stacks);
         glu.gluDeleteQuadric(earth);
 
